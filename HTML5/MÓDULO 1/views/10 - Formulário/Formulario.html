@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      .enviar {
+        cursor: pointer;
+      }
+      .name {
+        width: 250px;
+      }
+      .user {
+        width: 250px;
+      }
+      .email {
+        width: 250px;
+      }
+      .senha {
+        width: 250px;
+      }
+      .button {
+        cursor: pointer;
+      }
+    </style>
+
+    <title>Formulários</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <!-- type senha mostra preenchimento escondido padrão de senha  -->
+        <!-- atributo required torna o dado obrigatório  -->
+        <!-- atributo autofocus torna o campo com bordas mais grossas -->
+        <!-- atributo disabled desabilita o campo -->
+        <!-- atributo maxlength limita o número de caracteres -->
+        <!-- type email limita a digitação de padrão email com nome@email -->
+
+        <!-- type radio cria uma caixa de seleção -->
+        <!-- type checkbox cria uma caixa de marcação/checklist -->
+        <!-- atributo checked no radio deixa marcado por padrão -->
+
+        <legend>Dados Pessoais</legend>
+        <form action="cadastro.php" method="POST">
+          <!-- POST: envia sem o usuário ver (MAIS SEGURO)
+                GET:envia com os dados na URL -->
+
+          Nome: <br />
+          <input
+            type="text"
+            class="name"
+            name="name"
+            required
+            autofocus
+          /><br />
+
+          Usuário: <br />
+          <input
+            type="text"
+            class="user"
+            name="user"
+            required
+            autofocus
+            disabled
+          /><br />
+
+          <!-- placeholder para aparecer um valor no campo que desaparece depois de digitar -->
+          E-mail: <br />
+          <input
+            type="email"
+            class="email"
+            name="email"
+            required
+            autofocus
+            autocomplete="on"
+            placeholder="seuemail@gmail.com"
+          /><br />
+
+          Senha: <br />
+          <input
+            type="password"
+            class="senha"
+            name="password"
+            maxlength="6"
+          /><br /><br />
+
+          Time: <br />
+          <input
+            type="radio"
+            class="Time"
+            name="Time"
+            value="Vasco"
+            required
+            autofocus
+          />
+          Vasco <br />
+          <input
+            type="radio"
+            class="Time"
+            name="Time"
+            value="Flamengo"
+            required
+            autofocus
+            checked
+          />
+          Flamengo <br />
+          <input
+            type="radio"
+            class="Time"
+            name="Time"
+            value="Botafogo"
+            required
+            autofocus
+          />
+          Botafogo <br />
+          <input
+            type="radio"
+            class="Time"
+            name="Time"
+            value="Fluminense"
+            required
+            autofocus
+          />
+          Fluminense <br /><br />
+
+            <div required>
+                Estação do ano: <br />
+                <input
+              type="checkbox"
+              name="seasons"
+              autofocus
+              value="spring"
+                />Primavera<br />
+                <input
+              type="checkbox"
+              name="seasons"
+              autofocus
+              value="Summer"
+                />Verão<br />
+                <input
+              type="checkbox"
+              name="seasons"
+              autofocus
+              value="autumn"
+                />Outono<br />
+                <input
+              type="checkbox"
+              name="seasons"
+              autofocus
+              value="Winter"
+                />Inverno<br /><br />
+            </div>
+
+          <!-- step diz os saltos de números -->
+          Quantidade: <br />
+          <input
+            type="number"
+            name="qtd"
+            min="0"
+            max="500"
+            step="10"
+          /><br /><br />
+          <input type="range" name="quantidade" ><br /><br />
+
+          Data de Nascimento: <br />
+          <input
+            type="date"
+            name="data"
+            min="1900-12-31"
+            max="2002-12-31"
+          /><br /><br />
+
+          Cor: <br />
+          <input type="color" name="cor" /><br /><br />
+
+          Arquivo: <br />
+          <input type="file" name="file" class="file" /><br /><br />
+
+          URL: <br />
+          <input type="url" name="url" /><br /><br />
+
+          Pesquisar: <br />
+          <input type="search" name="pesquisar" /><br /><br />
+
+          <!-- rows: linhas; cols: colunas; spellcheck: corretor ortográficio -->
+          Mensagem: <br />
+          <textarea
+            name="msg"
+            class="msg"
+            rows="10"
+            cols="50"
+            spellcheck="true"
+          ></textarea
+          ><br /><br />
+          <button class="button">Clique aqui</button><br /><br />
+
+          <!-- Caixa de diálogo -->
+          Dia da semana: <br />
+          <select name="week">
+            <optgroup label="Dias de semana">
+              <option value="monday" >Segunda-Feira</option>
+              <option value="tuesay">Terça-Feira</option>
+              <option value="wednesday">Quarta-Feira</option>
+              <option value="thursday">Quinta-Feira</option>
+              <option value="friday">Sexta-Feira</option>
+            </optgroup>
+            <optgroup label="Fins de semana">
+              <option value="saturday" selected>Sábado</option>
+              <option value="sunday">Domingo</option>
+            </optgroup></select
+          ><br /><br />
+
+          Escolha um Curso: <br>
+          <input name="cursos" list="lista-cursos">
+            <datalist id="lista-cursos">
+                <option value="HTML5"></option>
+                <option value="CSS3"></option>
+                <option value="JAVASCRIPT"></option>
+
+            </datalist><br><br>
+
+          <!-- botão submit -->
+          <input
+            type="submit"
+            class="enviar"
+            name="btn-enviar"
+            value="Enviar"
+          /><br /><br />
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>

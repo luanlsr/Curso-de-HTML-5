@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+
+    <style>
+
+        svg{
+            background-color:#ccc;
+            
+        }
+        svg rect{
+            fill:blue; 
+            stroke:red;
+            stroke-width:3;
+            
+        }
+
+        svg polyline{ 
+            fill:none; 
+            stroke:red;
+            stroke-width:3;
+            
+        }
+
+        
+        svg circle{
+            fill:blue; 
+            stroke:red;
+            stroke-width:3;
+            
+
+         }  
+    </style>
+</head>
+<body>
+    
+    <svg width="800" height="300">
+        <polyline points="10,78 67,43 148,104 178,47 290,130 290,290 10,290 10,77"></polyline>
+
+        <circle cx="400" cy="220" r="57"></circle>
+
+        <rect width="280" height="140" x="380" y="10" rx="20" ry="20"></rect>
+
+        <polygon points="34,111 125,14 190,120" ></polygon>
+        
+    </svg>
+
+</body>
+</html>

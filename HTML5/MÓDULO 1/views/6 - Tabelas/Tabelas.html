@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+      }
+      th,
+      td {
+        padding: 7px;
+      }
+      .nome {
+        background-color: red;
+      }
+      .email {
+        background-color: blue;
+      }
+      .telefone {
+        background-color: green;
+      }
+      .cargo {
+        background-color: violet;
+      }
+      th,
+      td {
+        color: white;
+      }
+    </style>
+
+    <title>Tabelas</title>
+  </head>
+  <body>
+    <h1>Tabelas</h1>
+    <!-Insere uma tabela->
+    <table>
+      <!-Insere um título para tabela->
+      <caption>
+        Cadastro de Clientes
+      </caption>
+
+      <colgroup>
+        <col class="nome" />
+        <col class="email" />
+        <col class="telefone" />
+        <col class="cargo" />
+      </colgroup>
+
+      <!-Insere uma linha na tabela->
+      <thead>
+        <tr>
+          <!-Insere os dados da primeira linha->
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Telefone</th>
+          <th>Cargo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <!-Insere os conteúdos da tabela por coluna->
+        <td>Ana Lúcia da Silva</td>
+        <td>luan.ramalhosilva@gmail.com</td>
+        <td>(21)97002-4119</td>
+        <td rowspan="2">Desenvolvedor Web</td>
+      </tr>
+    
+      <tr>
+        <td>Luan da Silva Ramalho</td>
+        <td>luan.ramalhosilva@gmail.com</td>
+        <td>(21)97010-6538</td>
+      </tr>
+    </tbody>
+      <tr>
+    <tfoot>
+        <!-atributo colspan Mescla as colunas na mesma linha->
+        <td colspan="4">Total: 2</td>
+      </tr>
+    </tfoot>
+    </table>
+  </body>
+</html>
